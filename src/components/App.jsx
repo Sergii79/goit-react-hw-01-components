@@ -1,12 +1,12 @@
 import { RecipeList } from "./RecipeList";
-
+import recipes from "../recipes.json";
 
 
 export const App = () => {
   return (
-    <div>
-      <RecipeList items={[1, 2, 3]}/>
-    </div>
+    <>
+      <RecipeList items={recipes}/>
+    </>
   );
 };
 
