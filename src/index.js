@@ -7,7 +7,7 @@ import './index.css';
 const theme = {
   colors: {
     text: 'blue',
-    accent: 'orang',
+    accent: 'tomato',
   },
 };
 
