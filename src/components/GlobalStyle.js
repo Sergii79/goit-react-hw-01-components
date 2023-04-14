@@ -25,4 +25,4 @@ ul, ol {
     padding: 0;
     list-style: none;
 }
-`
+`;
