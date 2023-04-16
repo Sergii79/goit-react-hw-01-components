@@ -1,35 +1,36 @@
 import { PropTypes } from "prop-types";
-// import {  } from "./Profile.styles";
+import { Section, ProfileCard, Description, Avatar, Name, Tag, Location, Stats, Li, Label, Quantity } from "./Profile.styles";
 
 export const Profile = ({ items: { username, tag, location, avatar, stats: { followers, views, likes } } }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img
-          src={avatar}
-          alt={username}
-          className="avatar"
-        />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <Section>
+      <ProfileCard>
+        <Description>
+          <Avatar
+            src={avatar}
+            alt={username}          
+          />
+          <Name>{username}</Name>
+          <Tag>{tag}</Tag>
+          <Location>{location}</Location>
+        </Description>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+        <Stats>
+          <Li>
+            <Label>Followers</Label>
+            <Quantity>{followers}</Quantity>
+          </Li>
+          <Li>
+            <Label>Views</Label>
+            <Quantity>{views}</Quantity>
+          </Li>
+          <Li>
+            <Label>Likes</Label>
+            <Quantity>{likes}</Quantity>
+          </Li>
+        </Stats>
+      </ProfileCard>
+    </Section>
   );
 };
 
