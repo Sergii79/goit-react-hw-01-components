@@ -11,8 +11,8 @@ const Container = styled.div`
 export const Layout = ({ children }) => {
     return (
         <Container>
-            <header>header</header>
+            {/* <header>header</header> */}
             <main>{children}</main>
-            <footer>footer</footer>           
+            {/* <footer>footer</footer>            */}
         </Container>);
 };
