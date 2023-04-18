@@ -1,18 +1,21 @@
 import { PropTypes } from "prop-types";
 import { Statistic } from "./StatisticsCard";
+import { Section, StatisticsCard, Title, StatList, Item } from "./Statistics.styles";
 
 export const Statistics = ({ title, stats }) => {
     return (
-        <div>
-            {title && <h2>{title}</h2>}
-            <ul>
-                {stats.map(stat => (
-                <li key={stat.id} style={{ backgroundColor: getRandomHexColor() }}>
-                    <Statistic stat={stat} />
-                </li>
-                ))}
-            </ul>
-        </div>
+        <Section>
+            <StatisticsCard>
+                {title && <Title>{title}</Title>}
+                <StatList>
+                    {stats.map(stat => (
+                    <Item key={stat.id} style={{ backgroundColor: getRandomHexColor() }}>
+                        <Statistic stat={stat} />
+                    </Item>
+                    ))}
+                </StatList>
+            </StatisticsCard>
+        </Section>
      
 
     );
