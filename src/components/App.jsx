@@ -1,20 +1,19 @@
-// import { RecipeList } from "./RecipeList/RecipeList";
-// import recipes from "../recipes.json";
-// import { ProfileList } from "./Profile/ProfileList";
 import { GlobalStyle } from "./GlobalStyle";
 import { Layout } from "./Layout/Layout";
-
 
 
 import user from "./Profile/user";
 import { Profile } from "./Profile/Profile";
 
+import data from "./Statistics/data";
+import { Statistics } from "./Statistics/Statistics";
 
 export const App = () => {
   return (
     <Layout>     
-      <Profile items={user} />
       <GlobalStyle />
+      <Profile items={user} />
+      <Statistics title="Upload stats" stats={data} />
     </Layout>
   );
 };
