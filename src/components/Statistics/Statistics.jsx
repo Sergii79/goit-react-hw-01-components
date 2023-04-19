@@ -16,8 +16,6 @@ export const Statistics = ({ title, stats }) => {
                 </StatList>
             </StatisticsCard>
         </Section>
-     
-
     );
 };
 
