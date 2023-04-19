@@ -1,9 +1,10 @@
 import { PropTypes } from "prop-types";
 import { FriendCard } from "./FrienCard";
+import { Section, } from "./Friend.styles";
 
 export const FriendList = ( { friends }) => {
     return (
-        <div>
+        <Section>
             <ul className="friend-list"> 
                 {friends.map((friend) => (
                     <li key={friend.id}>
@@ -11,7 +12,7 @@ export const FriendList = ( { friends }) => {
                     </li>
                 ))}                   
             </ul>
-        </div>
+        </Section>
     );
 };
 
